@@ -1,0 +1,16 @@
+.explore__btn{
+    margin: 20px auto 0 auto;
+    background: linear-gradient(180deg, $color-secondary 0%,$color-primary 100%);
+    box-shadow: 0 4px 15px 0 rgba(153, 160, 160, 0.75);
+    color: #fff;
+    font-family: 'Roboto-bold', Verdana, sans-serif;
+    border: none;
+    border-radius: 50px;
+    height: 40px;
+    width: 200px;
+    opacity: 1;
+    &:hover{
+        opacity: 0.8;
+        box-shadow: 0 4px 15px 0 rgba(21, 22, 22, 0.75);
+    }
+}

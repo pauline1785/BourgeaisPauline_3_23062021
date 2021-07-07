@@ -1,0 +1,25 @@
+@font-face{
+    font-family: "Shrikland";
+    src: url('../../public/fonts/shrikland/Shrikhand-Regular.ttf');
+}
+
+@font-face{
+    font-family: "Roboto-regular";
+    src: url('../../public/fonts/roboto/Roboto-Regular.ttf');
+}
+
+@font-face{
+    font-family: "Roboto-bold";
+    src: url('../../public/fonts/roboto/Roboto-Bold.ttf');
+}
+
+
+body{
+    font-family: 'Roboto-regular', sans-serif;
+    font-size: 1rem;
+}
+
+h1, h2{
+    font-family: 'Roboto-bold', sans-serif;
+    font-size: 1.5rem;
+}

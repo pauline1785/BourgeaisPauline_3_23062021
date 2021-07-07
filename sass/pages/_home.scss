@@ -1,0 +1,58 @@
+// EXPLORE
+
+.explore{
+    background-color: $color-bg;
+    padding: 30px 20px;
+    text-align: center;
+    >h1{
+        padding: 0 40px 10px 40px;
+    }
+}
+
+
+
+// FONCTIONNEMENT
+
+.fonctionnement{
+    padding: 40px 20px;
+    & ol{
+        counter-reset: steps;
+    }
+    & li{
+        margin: 20px auto;
+        width: 80%;
+        background-color: $color-bg;
+        border-radius: 20px;
+        box-shadow: 0 4px 15px 0 rgba(153, 160, 160, 0.75);
+        padding: 20px;
+        list-style-type: none;
+        font-family: 'Roboto-bold', sans-serif;
+	    counter-increment: steps;
+        &:before {
+            content: counter(steps);
+            padding: 2px 6px;
+            background: $color-primary;
+            border-radius: 100px;
+            font-size: 0.7rem;
+            color: #fff;	
+        }
+    }
+    & .fas{
+        color: #7e7e7e;
+        padding-right: 10px;
+    }
+    
+}
+
+.fonctionnement li:last-child{
+    background-color: $color-primary;
+}
+
+
+
+//RESTAURANTS
+
+.restaurants{
+    background-color: $color-bg;
+    padding: 40px 20px;
+}
