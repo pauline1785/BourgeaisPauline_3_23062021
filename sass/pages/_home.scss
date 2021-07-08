@@ -28,25 +28,31 @@
         list-style-type: none;
         font-family: 'Roboto-bold', sans-serif;
 	    counter-increment: steps;
+        position: relative;
         &:before {
             content: counter(steps);
             padding: 2px 6px;
             background: $color-primary;
             border-radius: 100px;
             font-size: 0.7rem;
-            color: #fff;	
+            color: #fff;
+            position: absolute;
+            left: -8px;
         }
     }
     & .fas{
         color: #7e7e7e;
         padding-right: 10px;
     }
-    
+    & .fa-store{
+        color: $color-primary;
+    }    
 }
 
 .fonctionnement li:last-child{
-    background-color: $color-primary;
+    background-color: lighten($color-primary, 30%);
 }
+
 
 
 
@@ -85,9 +91,9 @@
 
 .restaurants__fiche span{
     position: absolute;
-    top : 10px;
-    right: 10px;
-    color: #307465 ;
+    top : 15px;
+    right: 15px;
+    color: #008766;
     padding: 6px 12px;
     font-size: 0.9rem;
     font-weight: bold;
