@@ -13,13 +13,24 @@
     src: url('../../public/fonts/roboto/Roboto-Bold.ttf');
 }
 
+@font-face{
+    font-family: "Roboto-light";
+    src: url('../../public/fonts/roboto/Roboto-Light.ttf');
+}
+
 
 body{
     font-family: 'Roboto-regular', sans-serif;
     font-size: 1rem;
 }
 
-h1, h2{
+h1{
+    font-family: 'Shrikland', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 2px;  
+}
+
+h2{
     font-family: 'Roboto-bold', sans-serif;
     font-size: 1.5rem;
 }
