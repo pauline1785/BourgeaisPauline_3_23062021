@@ -16,12 +16,16 @@ main img{
     border-top-right-radius: 40px;
     padding: 35px 15px;
     transform: translateY(-60px);
+    margin-bottom: -60px; /* enlève l'espace en bas fait par le transform */
     &__title{    
         display: flex;
         justify-content: space-between;
+        & .fa-heart{
+            top: 45px;
+            right: 30px;
+        }
         & .far{
-            padding: 10px;
-            margin-right: 20px;
+            background-color: $color-bg;
         }
     }
     & h2{
@@ -38,32 +42,64 @@ main img{
 .menu__products{
     display: flex;
     flex-flow: column wrap;
-    & a{
+    & .menu__card{
         display: flex;
         flex-flow: column wrap;
         border-radius: 15px;
         box-shadow: 2px 2px 5px rgba(0 0 0 / 20%);
         position: relative;
         margin-top: 20px;
-        text-decoration: none;
-        color: #000;
         background-color: #fff;
         padding: 10px;
+        cursor: pointer;
     }
     & p{
         padding-top: 5px;
+        max-width: 85%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis; /* points de suspension */
     }
     & span{
         position: absolute;
         right: 20px;
         bottom: 10px;
-        font-weight: bold;
     }
 }
 
 .menu__check{
-    display: none;
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    background-color: #99E2D0;
+    border-radius: 0px 15px 15px 0;
+    transition: width 1s ease-in-out;
+    & .fa-check-circle{
+        opacity: 0;
+        color: #fff;
+        margin: auto;
+        transform: rotate(0deg);
+        transition: all 0.9s ease-in-out;
+    }
 }
+
+.menu__card:hover .menu__check{
+    width: 20%;
+    background-color: #99E2D0;
+    border-radius: 0 12px 12px 0;
+}
+
+.menu__card:hover .fa-check-circle{
+    transform: rotate(-360deg);
+    transition: all 0.9s ease-in-out;
+    opacity: 1;
+}
+
+
+
 
 .menu__btn{
     text-align: center;
