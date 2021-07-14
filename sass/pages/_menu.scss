@@ -108,7 +108,7 @@ main img{
 
 
 
-@keyframes anim-card {
+@keyframes anim-card{
     0% {
       transform: translateY(50px);
       opacity: 0;
@@ -122,14 +122,6 @@ main img{
        opacity: 1;
   }
 }
-
-  
-
-  
-
-
-
-
 
 
 .menu__btn{
@@ -146,7 +138,6 @@ main img{
         flex-direction: row;
         justify-content: space-between;
         & .menu__card{
-            flex-direction: row;
             width: 20%;
         }
     }
