@@ -19,3 +19,13 @@ footer{
       padding-right: 10px;
    }
 }
+
+@media screen and (min-width: 768px){
+   .footer__content{
+      width: 80%;
+      margin: 0 auto;
+      & h4{
+         text-align: center;
+      }
+   }
+}
