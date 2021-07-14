@@ -73,6 +73,27 @@
     background-color: lighten($color-primary, 30%);
 }
 
+@media screen and (min-width: 1200px){
+    .fonctionnement{
+        width: 80%;
+        margin: 0 auto;
+        & ol{
+            display: flex;
+            flex-flow: row wrap;   
+        }
+        & li{
+            margin-top: 40px;
+            width: 23%;
+            text-align: center;
+            &:before{
+                top: -20px;
+                left: 47%;
+                padding: 8px 13px;
+                font-size: 1rem;
+            }
+        }
+    }
+}
 
 
 
@@ -100,7 +121,7 @@
     }
     & img{
         width: 100%;
-        height: 160px;
+        height: 150px;
         object-fit: cover;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
@@ -130,4 +151,23 @@
     & .far{
         background-color: #fff;
     }
+}
+
+
+
+// RESPONSIVE
+
+@media screen and (min-width: 1200px){
+    .restaurants__content{
+        width: 80%;
+        margin: 0 auto;
+        & .restaurants__fiche{
+            flex-direction: row;
+            justify-content: space-around;
+            & a{
+                flex-basis: 20%;  
+            }
+        }
+    }
+
 }
