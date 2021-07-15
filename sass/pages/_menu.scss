@@ -107,24 +107,6 @@ main img{
     opacity: 1;
 }
 
-
-
-@keyframes anim-card{
-    0% {
-      transform: translateY(50px);
-      opacity: 0;
-  }
-  20% {
-      transform: translateY(0);
-      opacity: 1;
-  }
-  100% {
-       transform: translateY(0);
-       opacity: 1;
-  }
-}
-
-
 .menu__btn{
     text-align: center;
     margin-top: 20px;
