@@ -1,0 +1,17 @@
+
+// COMING MENU__CARD
+
+@keyframes anim-card{
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  20% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+  100% {
+       transform: translateY(0);
+       opacity: 1;
+  }
+}
