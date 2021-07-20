@@ -73,27 +73,7 @@
     background-color: lighten($color-primary, 30%);
 }
 
-@media screen and (min-width: 1200px){
-    .fonctionnement{
-        width: 80%;
-        margin: 0 auto;
-        & ol{
-            display: flex;
-            flex-flow: row wrap;   
-        }
-        & li{
-            margin-top: 40px;
-            width: 23%;
-            text-align: center;
-            &:before{
-                top: -20px;
-                left: 47%;
-                padding: 8px 13px;
-                font-size: 1rem;
-            }
-        }
-    }
-}
+
 
 
 
@@ -166,6 +146,53 @@
 
 
 // RESPONSIVE
+
+/* Fonctionnement */
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+    .fonctionnement{
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .fonctionnement{
+        width: 80%;
+        margin: 0 auto;
+        & ol{
+            display: flex;
+            flex-flow: row wrap;   
+        }
+        & li{
+            margin-top: 40px;
+            width: 23%;
+            text-align: center;
+            &:before{
+                top: -20px;
+                left: 47%;
+                padding: 8px 13px;
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+
+/* Restaurants */
+
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+    .restaurants__content{
+        width: 95%;
+        margin: 0 auto;
+        & .restaurants__fiche{
+            flex-direction: row;
+            justify-content: space-around;
+            & a{
+                flex-basis: 45%;
+            }
+        }
+    }
+}
 
 @media screen and (min-width: 1200px){
     .restaurants__content{
