@@ -44,62 +44,64 @@ main img{
     flex-flow: column wrap;
     & .menu__card{
         display: flex;
-        flex-flow: column wrap;
         border-radius: 15px;
         box-shadow: 2px 2px 5px rgba(0 0 0 / 20%);
         position: relative;
         margin-top: 20px;
         background-color: #fff;
-        padding: 10px;
         cursor: pointer;
         transform: translateY(50px);
         opacity: 0;
         animation: anim-card 3s ease;
         animation-delay: 0.6s;
-        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
         &:first-child{
             animation-delay: 0.5s;
         }
         &:last-child{
             animation-delay: 0.7s;
         }
-    }
-    & p{
-        padding-top: 5px;
-        max-width: 85%;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis; /* points de suspension */
-    }
-    & span{
-        position: absolute;
-        right: 20px;
-        bottom: 10px;
+        &--text{
+            display: flex;
+            flex-flow: column nowrap;
+            flex: 1;
+            padding: 10px;
+            & h3, p{
+                padding-top: 5px;
+                max-width: 85%;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis; 
+            }
+        }
+        &--price{
+            display: flex;
+            align-items: flex-end;
+            padding: 10px;
+        }
+        &--check{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 0;
+            overflow: hidden;
+            background-color: $color-tertiary;
+            border-radius: 0px 15px 15px 0;
+            transition: all 0.5s linear;
+            & .fa-check-circle{
+                opacity: 0;
+                color: #fff;
+                margin: auto;
+                transform: rotate(0deg);
+                transition: all 0.9s ease-in-out;
+            }
+        }
     }
 }
 
-
-.menu__check{
-    display: flex;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 0;
-    background-color: $color-tertiary;
-    border-radius: 0px 15px 15px 0;
-    transition: width 1s ease-in-out;
-    & .fa-check-circle{
-        opacity: 0;
-        color: #fff;
-        margin: auto;
-        transform: rotate(0deg);
-        transition: all 0.9s ease-in-out;
-    }
-}
-
-.menu__card:hover .menu__check{
+.menu__card:hover .menu__card--check{
     width: 20%;
+    transition: 1s ease-in-out;
 }
 
 .menu__card:hover .fa-check-circle{
@@ -111,6 +113,7 @@ main img{
     text-align: center;
     margin-top: 20px;
 }
+
 
 
 
