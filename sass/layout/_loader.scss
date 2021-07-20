@@ -1,35 +1,21 @@
 
-
-@keyframes loader-background {
-  0% {
-      opacity: 1;
-      visibility: visible;
-  }
-  90% {
-      opacity: 1;
-  }
-  100% {
-      opacity: 0;
-      visibility: hidden;
-  }
-}
 .loader {
   position: fixed;
   height: 100%;
   width: 100%;
-  animation: loader-background 2500ms forwards;
+  animation: loader-visibility 2500ms forwards;
   background-color: white;
   z-index: 999;
 }
 
-.container{
+.dots{
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
 }
 
-.container div{
+.dots div{
 	height: 30px;
 	width: 30px;
 	border-radius: 50%;
@@ -51,34 +37,12 @@
   background: $color-secondary;
 }
 
-.container div:nth-child(1),.container div:nth-child(3),.container div:nth-child(5){
+.dots div:nth-child(1),.dots div:nth-child(3),.dots div:nth-child(5){
 	animation: animateone 1s linear infinite;
 	top: 40px;
 }
 
-.container div:nth-child(2),.container div:nth-child(4){
+.dots div:nth-child(2),.dots div:nth-child(4){
 	animation: animatetwo 1s linear infinite;
 	top: -40px;
-}
-
-@keyframes animateone{
-	0%{
-		top:40px;
-		transform:scale(1);
-	}
-	50%{
-		top:-40px;
-		transform:scale(0.5);
-	}
-}
-
-@keyframes animatetwo{
-	0%,100%{
-		top:-40px;
-		transform:scale(0.5);
-	}
-	50%{
-		top:40px;
-		transform:scale(1);
-	}
 }
