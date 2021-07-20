@@ -37,6 +37,7 @@
     background: $color-primary;
     background: linear-gradient(180deg, $color-primary 0%, $color-secondary 50%);
     -webkit-background-clip: text;
+    -moz-background-clip: text;
   }
   
 .favorite:hover .far{
