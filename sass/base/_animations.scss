@@ -1,4 +1,3 @@
-
 // COMING MENU__CARD
 
 @keyframes anim-card{
@@ -20,7 +19,7 @@
 
 // LOADER
 
-@keyframes loader-visibility {
+@keyframes loader-visibility{
   0% {
       opacity: 1;
       visibility: visible;
@@ -34,7 +33,8 @@
   }
 }
 
-@keyframes animateone{
+
+@keyframes anim-dot-one{
 	0%{
 		top:40px;
 		transform:scale(1);
@@ -45,7 +45,7 @@
 	}
 }
 
-@keyframes animatetwo{
+@keyframes anim-dot-two{
 	0%,100%{
 		top:-40px;
 		transform:scale(0.5);
