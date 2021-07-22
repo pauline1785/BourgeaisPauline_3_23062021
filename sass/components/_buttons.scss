@@ -22,30 +22,28 @@
 
 // HEART BUTTONS
 
-.fa-heart{
-    font-size: 20px;
-    position: absolute;
-    height: 40px;
-    transition: all .4s linear;
-}
-
-.favorite .far {
-    z-index: 100;
-  }
-  
-.favorite .fas {
-    background: $color-primary;
-    background: linear-gradient(180deg, $color-primary 0%, $color-secondary 50%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-  }
-  
-.favorite:hover .far{
-    height: 0;
-    transition: all .4s linear;
-    cursor: pointer;
-}
-  
-.favorite:hover {
-    color: rgba(147,86,220, 0);
-}
+.favorite{
+    & .fa-heart{
+        font-size: 20px;
+        position: absolute;
+        height: 40px;
+        transition: all .4s linear;
+    }
+    & .far {
+        z-index: 100;
+    }
+    & .fas {  
+        background: linear-gradient(180deg, $color-primary 0%, $color-secondary 50%);
+        -webkit-background-clip: text; /* défini comment s'étend le background par rapport au conteneur */
+        -moz-background-clip: text;
+    }
+    &:hover{
+        color: rgba(147,86,220, 0);
+        
+    }
+    &:hover .far{
+        height: 0;
+        transition: all .4s linear;
+        cursor: pointer;
+    }
+}     
